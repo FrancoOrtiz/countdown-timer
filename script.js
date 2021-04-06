@@ -19,10 +19,22 @@ const interval = setInterval( () => {
     let hours = Math.floor((actualDistant % dayTime) / hoursTime);
     let day = Math.floor(actualDistant / dayTime);
 
-    $seconds.textContent = seconds;
-    $minutes.textContent = minutes;
-    $hours.textContent = hours;
-    $days.textContent = day;
+    $seconds.textContent = seconds.toLocaleString('en-US', {
+        minimumIntegerDigits: 2,
+        useGrouping: false
+    });
+    $minutes.textContent = minutes.toLocaleString('en-US', {
+        minimumIntegerDigits: 2,
+        useGrouping: false
+    });
+    $hours.textContent = hours.toLocaleString('en-US', {
+        minimumIntegerDigits: 2,
+        useGrouping: false
+    });
+    $days.textContent = day.toLocaleString('en-US', {
+        minimumIntegerDigits: 2,
+        useGrouping: false
+    });
 
     if(actualDistant <= 0){
         clearInterval(interval)
