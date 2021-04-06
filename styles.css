@@ -39,6 +39,7 @@ body{
     flex-direction: column;
     align-items: center;
     width: 22%;
+    max-width: 100px;
 }
 
 h1{
@@ -54,11 +55,25 @@ h1{
 }
 
 span{
+    position: relative;
     margin: auto;
+    width: 100%;
+    text-align: center;
     padding-top: 8px;
     padding-bottom: 8px;
     color: var(--softred);
     font-size: 38px;
+}
+
+span::after{
+    z-index: 10;
+    content: "";
+    position: absolute;
+    background-color: rgba(44, 44, 68, 0.6);
+    left: 0;
+    width: 100%;
+    height: 51%;
+    top: 0;
 }
 
 p{
@@ -70,13 +85,14 @@ p{
 
 footer{
     background-image: url(/images/pattern-hills.svg);
-    background-position-x: 560px;
-    background-position-y: -40px;
+    background-position-x: -205px;
+    background-position-y: 0px;
+    background-size: 400%;
+    background-repeat: no-repeat;
     position: fixed;
     bottom: 0;
+    height: 24%;
     width: 100%;
-    padding-top: 80px;
-    padding-bottom: 40px;
     display: flex;
 }
 
@@ -86,6 +102,7 @@ footer{
     width: 35%;
     margin: auto;
     cursor: pointer;
+    max-width: 200px;
 }
 
 .social__contain img:hover{
@@ -93,7 +110,87 @@ footer{
 }
 
 .number__contain{
+    position: relative;
+    border-radius: 5px;
     background-color: rgb(51, 54, 78);
     display: flex;
     width: 100%;
+    box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.2);
+}
+
+.number__contain::before{
+    z-index: 100;
+    content: "";
+    position: absolute;
+    background-color: rgb(30, 30, 42);
+    top: 47%;
+    left: -5px;
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+}
+
+.number__contain::after{
+    z-index: 100;
+    content: "";
+    position: absolute;
+    background-color: rgb(30, 30, 42);
+    top: 47%;
+    right: -5px;
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+}
+
+@media screen and (max-height: 550px){
+    h1{
+        margin-top: 10%;
+    }
+}
+
+@media screen and (min-width: 813px){
+    h1{
+        margin-top: 140px;
+        font-size: 24px;
+        letter-spacing: 6px;
+    }
+
+    .timer{
+        margin-top: 100px;
+        width: 45%;
+        min-width: 640px;
+    }
+
+    span{
+        font-size: 80px;
+        padding-top: 14px;
+        padding-bottom: 14px;
+
+    }
+
+    .number__contain{
+        box-shadow: 0px 10px 0px 0px rgba(0, 0, 0, 0.2);
+    }
+
+    p{  
+        letter-spacing: 6px;
+        margin-top: 30px;
+        font-size: 13px;
+    }
+
+    .social__contain{
+        margin-bottom: 40px;
+        width: 10%;
+        min-width: 120px;
+    }
+
+    .timer__box{
+        max-width: 40%;
+    }
+
+    footer{
+        background-position-x: -805px;
+        background-position-y: -10px;
+        background-size: 200%;
+    }
 }
