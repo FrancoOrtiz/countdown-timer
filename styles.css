@@ -1,0 +1,21 @@
+/* reseteo de estilos */
+
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+:root{
+    --grayishblue: hsl(237, 18%, 59%);
+    --softred: hsl(345, 95%, 68%);
+    --white: hsl(0, 0%, 100%);
+    --darkdesaturatedblue: hsl(236, 21%, 26%);
+    --verydarkblue: hsl(235, 16%, 14%);
+    --verydarkmostlyblackblue: hsl(234, 17%, 12%);
+}
+
+body{
+    font-family: 'Red Hat Text', sans-serif;
+}
