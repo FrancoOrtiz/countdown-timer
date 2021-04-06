@@ -19,7 +19,7 @@
 body{
     font-family: 'Red Hat Text', sans-serif;
     background-color: rgb(30, 30, 42);
-    background-image: url(/images/bg-stars.svg);
+    background-image: url(./images/bg-stars.svg);
     background-repeat: no-repeat;
     background-position-x: 40px;
     background-position-y: 50px;
@@ -85,7 +85,7 @@ p{
 }
 
 footer{
-    background-image: url(/images/pattern-hills.svg);
+    background-image: url(./images/pattern-hills.svg);
     background-position-x: -205px;
     background-position-y: 0px;
     background-size: 400%;
